@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>INGENERIA EN INFORMATICA</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Bienvenido</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['../perfil']">Perfil</ion-item>
+        <ion-item href="home" >Inicio</ion-item>
+        <ion-item [routerLink]="['../horario']" >Horario</ion-item>
+        <ion-item href="login" >Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  
+  <ion-accordion-group>
+   
+    
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>{{asignatura?.nombre}}</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item>
+          <p class="ausente"><small>Jueves, 11 de agosto de 2022             Ausente</small></p>
+        </ion-item>
+        <ion-item>
+          <p><small>Viernes, 12 de agosto de 2022             Presente</small></p>
+          
+        </ion-item>
+        <ion-item>
+          <p><small>jueves, 18 de agosto de 2022             Presente</small></p>
+
+       </ion-item>
+       <ion-item>
+        <p><small>Viernes, 19 de agosto de 2022             Presente</small></p>
+       </ion-item>
+
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  
+
+
+
+</ion-content>

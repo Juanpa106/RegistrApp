@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card> 
+    <img width="" src="assets/img/logoDuoc.png" />
+    <ion-card-content class="card-login">
+      <ion-item class="nombre">
+        <ion-label position="floating">
+          <ion-icon name="person-outline"></ion-icon> Usuario</ion-label>
+        <ion-input #txtNombre></ion-input>
+      </ion-item>
+
+      <ion-item class="email">
+        <ion-label position="floating">
+          <ion-icon name="mail-outline"></ion-icon> Correo</ion-label>
+        <ion-input #txtEmail></ion-input>
+      </ion-item>
+      
+      <ion-item  class="pass">
+        <ion-label position="floating">
+          <ion-icon name="lock-closed-outline"></ion-icon>Contraseña </ion-label>
+        <ion-input type="password" #txtPass  ></ion-input> 
+      </ion-item >
+  
+      <ion-button class="Ingresar"  slot="start" shape="round" expand="full" (click)="alertRegistro()" (click)="registrar(txtEmail,txtPass,txtNombre)" >REGISTRARSE</ion-button>
+
+
+     </ion-card-content>
+
+     
+  </ion-card>
+</ion-content>

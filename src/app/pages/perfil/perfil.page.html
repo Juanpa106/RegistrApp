@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PERFIL</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-avatar class="avatar"  slot="start">
+          <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png">
+        </ion-avatar>
+      </ion-toolbar>
+      <ion-toolbar color="primary">
+        <ion-subtitle class="nombre">Bienvenido Jorge Lopez</ion-subtitle>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['../perfil']">Perfil</ion-item>
+        <ion-item href="home" >Inicio</ion-item>
+        <ion-item [routerLink]="['../horario']" >Horario</ion-item>
+        <ion-item href="login" >Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+  
+
+
+  <ion-card class="cardInfo">
+    <img width="200" class="imgPerfil" src="https://cdn-icons-png.flaticon.com/512/201/201818.png" />
+    <ion-card-header>
+
+      <ion-card-title class="text" > Jorge Lopez</ion-card-title>
+      <ion-card-subtitle> Ingenieria en Informatica </ion-card-subtitle>
+      <ion-card-subtitle> Puente Alto </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+
+
+</ion-content>

@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>HORARIO</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-avatar class="avatar"  slot="start">
+          <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png">
+        </ion-avatar>
+      </ion-toolbar>
+      <ion-toolbar color="primary">
+        <ion-subtitle class="nombre">Bienvenido Jorge Lopez</ion-subtitle>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['../perfil']">Perfil</ion-item>
+        <ion-item href="home" >Inicio</ion-item>
+        <ion-item [routerLink]="['../horario']" >Horario</ion-item>
+        <ion-item href="login" >Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+
+  <ion-card><ion-accordion-group [value]="['first']" expand="inset">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>LUNES</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p> Estadistica Descriptiva // 8:30 - 9:50 </p>
+        
+        <p> Ingles Elemental // 9:51 - 11:30 </p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second" expand="inset">
+      <ion-item slot="header" color="light">
+        <ion-label>MARTES</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p> Programacion aplicaciones moviles // 8:30 - 9:50 </p>
+        
+        <p> Arquitectura // 9:51 - 11:30 </p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third" expand="inset">
+      <ion-item slot="header" color="light">
+        <ion-label>MIERCOLES</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p> Calidad de Software // 8:30 - 9:50 </p>
+        
+        <p> Ingles Elemental // 9:51 - 11:30 </p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fourth" expand="inset">
+      <ion-item slot="header" color="light">
+        <ion-label>JUEVES</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p> Programacion aplicaciones moviles // 8:30 - 9:50 </p>
+        
+        <p> Etica para el Trabajo // 9:51 - 11:30 </p>
+      </div>
+    </ion-accordion><ion-accordion value="fifth" expand="inset">
+      <ion-item slot="header" color="light">
+        <ion-label>VIERNES</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p> Arquitectura // 8:30 - 9:50 </p>
+        
+        <p> Ingles Elemental // 9:51 - 11:30 </p>
+      </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-card>
+  
+
+ 
+
+
+
+</ion-content>

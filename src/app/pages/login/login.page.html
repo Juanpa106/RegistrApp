@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ACCESO APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card> 
+    <img width="" src="assets/img/logo.png" />
+    <ion-card-content class="card-login">
+      <ion-item class="user">
+        <ion-label position="floating">
+          <ion-icon name="person-outline"></ion-icon> Correo</ion-label>
+        <ion-input #txtEmail></ion-input>
+      </ion-item>
+      
+      <ion-item  class="pass">
+        <ion-label position="floating">
+          <ion-icon name="lock-closed-outline"></ion-icon>Contraseña </ion-label>
+        <ion-input type="password"  #txtPass ></ion-input> 
+      
+        
+      </ion-item >
+    
+      <ion-button size="small"  expand="block" color="warning" (click)="recuperar()" class="recuperarContra" >
+        Recuperar contraseña
+      </ion-button>
+    
+      <ion-button class="Ingresar"  slot="start" shape="round" expand="full" (click)="login(txtEmail,txtPass)" >INGRESAR</ion-button>
+      <ion-button class="Ingresar" slot="start" shape="round" expand="full" color="success" (click)="register()">REGISTRARSE</ion-button>
+
+      <ion-button class="btn-google" color="ligth" size="small" (click)="googleAuth()" > GOOGLE <ion-icon name="logo-google"></ion-icon></ion-button>
+      <ion-button class="btn-git" size="small" color="ligth" (click)="gitAuth()" > GITHUB <ion-icon name="logo-github"></ion-icon> </ion-button>
+      
+      
+     </ion-card-content>
+
+     
+     
+  </ion-card>
+
+      
+  
+
+
+</ion-content>

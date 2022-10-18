@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>seccion</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-item  *ngFor="let aux of alumnos" [routerLink]="['../seccion']">
+    <ion-avatar slot="start">
+      <img src="https://defc.ulpgc.es/wp-content/themes/defc-child/images/avatar.jpg">
+    </ion-avatar>
+    <ion-card>
+      <ion-card-header>
+        <ion-label >
+          
+
+          <ion-card-subtitle>{{ aux.nombre }} {{ aux.apellido }} </ion-card-subtitle>
+          <ion-card-subtitle></ion-card-subtitle>
+
+        </ion-label>
+      </ion-card-header>
+    
+      
+
+    </ion-card>
+
+  </ion-item>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button [routerLink]="['../generate-qr']">
+    <ion-icon name="qr-code-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-avatar class="avatar"  slot="start">
+          <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png">
+        </ion-avatar>
+      </ion-toolbar>
+      <ion-toolbar color="primary">
+        <ion-subtitle class="nombre">Bienvenido Jorge Lopez</ion-subtitle>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['./perfil']">Perfil</ion-item>
+        <ion-item href="home" >Inicio</ion-item>
+        <ion-item [routerLink]="['./horario']" >Horario</ion-item>
+        <ion-item href="login" >Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-item class="appmovile" *ngFor="let aux of asignaturas" [routerLink]="['../seccion']">
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-label >
+          <ion-icon name="layers-outline"></ion-icon>
+
+          <ion-card-subtitle>{{ aux.nombre }}</ion-card-subtitle>
+          <ion-card-subtitle>{{ aux.seccion }}</ion-card-subtitle>
+
+        </ion-label>
+      </ion-card-header>
+    
+      
+
+    </ion-card>
+
+  </ion-item>
+
+</ion-content>

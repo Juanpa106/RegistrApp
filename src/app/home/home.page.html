@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asignaturas</ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-menu side="start" menuId="first" contentId="main">
+ 
+    <ion-header>
+      
+      <ion-toolbar color="primary">
+        
+        <ion-subtitle class="nombre">Bienvenido  </ion-subtitle>
+        
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['../perfil']">Perfil</ion-item>
+        <ion-item href="home" >Inicio</ion-item>
+        <ion-item [routerLink]="['../horario']" >Horario</ion-item>
+        <ion-item href="login" >Cerrar Sesión</ion-item>
+        <ion-item href="api" >API</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+    <ion-item class="appmovile" *ngFor="let aux of asignaturas" [routerLink]="['/home', aux.id]">
+      
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-label >
+            <ion-icon name="layers-outline"></ion-icon>
+
+            <ion-card-subtitle>{{ aux.nombre }}</ion-card-subtitle>
+            <ion-card-subtitle>{{ aux.sigla }}</ion-card-subtitle>
+            <ion-card-subtitle>{{ aux.seccion }}</ion-card-subtitle>
+
+          </ion-label>
+        </ion-card-header>
+      
+        
+
+      </ion-card>
+
+    </ion-item>
+
+
+
+   
+    <ion-button class="scanear" (click)="Scannear" [routerLink]="['./scanear']" > Scanner </ion-button>
+
+</ion-content>
